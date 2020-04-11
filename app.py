@@ -36,7 +36,7 @@ def index_get():
             'temperature' : r['main']['temp'],
             'description' : r['weather'][0]['description'],
             'icon' : r['weather'][0]['icon'],
-            'temp' : (r['main']['temp'] * (9/5)) + 32
+            'temp' : round(((r['main']['temp'] * (9/5)) + 32),2)
         }
         weather_data.insert(0,weather)
 
